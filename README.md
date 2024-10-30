@@ -10,8 +10,8 @@ You can browse it on Datasette Lite [here](https://lite.datasette.io/?parquet=ht
 1. Download [metadata](https://s3.wasabisys.com/rxrx3-blinded/metadata.zip?AWSAccessKeyId=K4U6TQIYNAQX7Y34W6CS&Signature=N9kR2cz8J%2FJv8BEwqi7gtF8uPmg%3D&Expires=1730385862&u=f462c00159cf940908a0f565731b4ad8).
 2. Run the script below
 
-```
-python -c "
+<details>
+```py
 import pandas as pd
 
 # Read the CSV file
@@ -30,5 +30,6 @@ df['cell_type'] = df['cell_type'].astype('category')
 
 # Step 4: Save as Parquet with high compression
 df.to_parquet('metadata_rxrx3_trimmed.parquet')
-"
 ```
+</details>
+
