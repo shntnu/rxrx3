@@ -3,7 +3,7 @@
 1. Download [metadata](https://s3.wasabisys.com/rxrx3-blinded/metadata.zip?AWSAccessKeyId=K4U6TQIYNAQX7Y34W6CS&Signature=N9kR2cz8J%2FJv8BEwqi7gtF8uPmg%3D&Expires=1730385862&u=f462c00159cf940908a0f565731b4ad8).
 2. Run the script below
 
-This filtered metadata can be viewed on datasette lite ([url](https://lite.datasette.io/?metadata=https://raw.githubusercontent.com/shntnu/rxrx3/refs/heads/main/metadata_rxrx3_trimmed.parquet)).
+This filtered metadata can be viewed on datasette lite ([url](https://lite.datasette.io/?parquet=https%3A%2F%2Fraw.githubusercontent.com%2Fshntnu%2Frxrx3%2Frefs%2Fheads%2Fmain%2Fmetadata_rxrx3_trimmed.parquet)).
 
 ```
 python -c "
@@ -24,6 +24,6 @@ df['perturbation_type'] = df['perturbation_type'].astype('category')
 df['cell_type'] = df['cell_type'].astype('category')
 
 # Step 4: Save as Parquet with high compression
-df.to_parquet('metadata_rxrx3.parquet', compression='brotli', compression_level=11)
+df.to_parquet('metadata_rxrx3_trimmed.parquet')
 "
 ```
