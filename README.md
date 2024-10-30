@@ -1,9 +1,12 @@
 # RXRX3 metadata
 
+This repo contains a [filtered version](https://lite.datasette.io/?parquet=https%3A%2F%2Fraw.githubusercontent.com%2Fshntnu%2Frxrx3%2Frefs%2Fheads%2Fmain%2Fmetadata_rxrx3_trimmed.parquet) of RXRX3 metadata, where at least one of `gene` or `treatment` has not be anonymized.
+
+
+## Instructions to create the filtered metadata
+
 1. Download [metadata](https://s3.wasabisys.com/rxrx3-blinded/metadata.zip?AWSAccessKeyId=K4U6TQIYNAQX7Y34W6CS&Signature=N9kR2cz8J%2FJv8BEwqi7gtF8uPmg%3D&Expires=1730385862&u=f462c00159cf940908a0f565731b4ad8).
 2. Run the script below
-
-This filtered metadata can be viewed on datasette lite ([url](https://lite.datasette.io/?parquet=https%3A%2F%2Fraw.githubusercontent.com%2Fshntnu%2Frxrx3%2Frefs%2Fheads%2Fmain%2Fmetadata_rxrx3_trimmed.parquet)).
 
 ```
 python -c "
