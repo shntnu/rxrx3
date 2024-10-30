@@ -11,25 +11,46 @@ You can browse it on Datasette Lite [here](https://lite.datasette.io/?parquet=ht
 2. Run the script below
 
 <details>
+
 ```py
 import pandas as pd
 
 # Read the CSV file
-df = pd.read_csv('metadata_rxrx3.csv', low_memory=False)  # Replace with the actual file path
+df = pd.read_csv(
+    "metadata_rxrx3.csv", low_memory=False
+)  # Replace with the actual file path
 
 # Step 1: Remove rows where both 'gene' and 'treatment' columns contain "RXRX3"
-df = df[~((df['gene'].str.contains('RXRX3', na=False)) & (df['treatment'].str.contains('RXRX3', na=False)))]
+df = df[
+    ~(
+        (df["gene"].str.contains("RXRX3", na=False))
+        & (df["treatment"].str.contains("RXRX3", na=False))
+    )
+]
 
 # Step 2: Keep only the specified columns
-df = df[['experiment_name', 'gene', 'treatment', 'SMILES', 'concentration', 'perturbation_type', 'cell_type']]
+df = df[
+    [
+        "experiment_name",
+        "gene",
+        "treatment",
+        "SMILES",
+        "concentration",
+        "perturbation_type",
+        "cell_type",
+    ]
+]
 
 # Step 3: Optimize data types for further compression
 # Convert columns with limited unique values to categorical types
-df['perturbation_type'] = df['perturbation_type'].astype('category')
-df['cell_type'] = df['cell_type'].astype('category')
+df["perturbation_type"] = df["perturbation_type"].astype("category")
+df["cell_type"] = df["cell_type"].astype("category")
 
 # Step 4: Save as Parquet with high compression
-df.to_parquet('metadata_rxrx3_trimmed.parquet')
+df.to_parquet("metadata_rxrx3_trimmed.parquet", index=False, compression="gzip")
+
+
 ```
+
 </details>
 
