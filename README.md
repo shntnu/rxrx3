@@ -3,7 +3,7 @@
 1. Download [metadata](https://s3.wasabisys.com/rxrx3-blinded/metadata.zip?AWSAccessKeyId=K4U6TQIYNAQX7Y34W6CS&Signature=N9kR2cz8J%2FJv8BEwqi7gtF8uPmg%3D&Expires=1730385862&u=f462c00159cf940908a0f565731b4ad8).
 2. Run the script below
 
-This filtered metadata can be viewed on datasette lite [[url](https://lite.datasette.io/?metadata=https://raw.githubusercontent.com/shntnu/rxrx3/refs/heads/main/metadata_rxrx3_trimmed.parquet)].
+This filtered metadata can be viewed on datasette lite ([url](https://lite.datasette.io/?metadata=https://raw.githubusercontent.com/shntnu/rxrx3/refs/heads/main/metadata_rxrx3_trimmed.parquet)).
 
 ```
 python -c "
