@@ -2,7 +2,7 @@
 
 This repo contains a filtered version of RXRX3 metadata, where at least one of `gene` or `treatment` has not be anonymized.
 
-You can browse it on Datasette Lite (https://lite.datasette.io/?parquet=https%3A%2F%2Fraw.githubusercontent.com%2Fshntnu%2Frxrx3%2Frefs%2Fheads%2Fmain%2Fmetadata_rxrx3_trimmed.parquet).
+You can browse it on Datasette Lite [here](https://lite.datasette.io/?parquet=https%3A%2F%2Fraw.githubusercontent.com%2Fshntnu%2Frxrx3%2Frefs%2Fheads%2Fmain%2Fmetadata_rxrx3_trimmed.parquet).
 
 
 ## Instructions to create the filtered metadata
